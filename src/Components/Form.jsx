@@ -6,11 +6,11 @@ const Form = (props) => {
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleNombre = (e) => {
+  const hNombre = (e) => {
     setErrorMessage("");
     setNombre(e.target.value)};
 
-  const handleEmail = (e) => {
+  const hEmail = (e) => {
     setErrorMessage("");
       setEmail(e.target.value)
   };
@@ -38,15 +38,15 @@ function handleDatos(e){
       <form onSubmit={handleDatos} >  
         <div className="form">
           <div className="input">
-              <label htmlFor="nombre">Nombre  </label>  
-              <input type="text" id="nombre" value={nombre} onChange={handleNombre} />
+              <label htmlFor="nombre">Name  </label>  
+              <input type="text" id="nombre" value={nombre} onChange={hNombre} />
           </div>
           <div className="input">
               <label htmlFor="email">Email  </label>
-              <input type="email" id="email" value={email} onChange={handleEmail}/>
+              <input type="email" id="email" value={email} onChange={hEmail}/>
           </div>
           <div className="button">
-              <button type="submit">ENVIAR</button>
+              <button type="submit">SEND</button>
           </div>
           <div className="alert">
               {errorMessage ? <p>{errorMessage}</p> : null}

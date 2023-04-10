@@ -2,18 +2,18 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 
-export const  Card = (cards) => {
+export const  Card = (c) => {
   const [user, setUsers] = useState([]); 
 
 
   useEffect(()=>{
-    cards.children ? setUsers(cards.children) : console.log("");;
-  }, [ user, cards.children])
+    c.children ? setUsers(c.children) : console.log("");;
+  }, [ user, c.children])
 
-  const addFav = (userFav)=>{
+  const addFav = (uFav)=>{
     const users = localStorage.getItem('favoritosCard') || '[]';
     let usersArray = JSON.parse(users);
-    usersArray.some(u => u.id === userFav.id) ? console.log("Esta card ya existe") : usersArray.push(user ); 
+    usersArray.some(u => u.id === uFav.id) ? console.log("Esta card ya existe") : usersArray.push(user ); 
     localStorage.setItem('favoritosCard', JSON.stringify(usersArray))
   }
 
