@@ -12,11 +12,13 @@ code {
     monospace;
 }
 .favButton{
-  background-color: rgba(136, 136, 136, 0.116);
+  background-color: rgb(255, 255, 255);
   padding: 10px;
   border: none;
   width: 100%;
   cursor: pointer;
+  border-radius: 10%;
+  border: 1px solid
 }
 
 h1{
@@ -31,7 +33,7 @@ nav{
 }
 
 a{
-  color: #000;
+  color: #1964c0;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
@@ -79,9 +81,6 @@ form{
   border: 0.5px solid rgb(136, 136, 136);
 }
 
-.card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
-}
 
 .card-grid{
   display: flex;
@@ -94,7 +93,7 @@ form{
 }
 
 table {
- border-collapse: collapse;
+    border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
@@ -113,9 +112,15 @@ tr:nth-child(even) {
 }
 
 .dark{
-  background-color: #12121296;
+  background-color: #1d1d21;
   color: white;
 }
 .dark > a {
   color: white;
+}
+
+.dhlogo{
+  margin-left: 5px;
+  border-radius: 30px;
+  background-color: white;
 }
